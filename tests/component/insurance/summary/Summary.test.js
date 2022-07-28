@@ -32,3 +32,11 @@ test('Summary Sees Input', async () => {
   getByText(`Premium: US$ 1800`)
 
 })
+
+test('Summary Buy goes to Home', async () => {
+  const { getByText, router } = setup(InsuranceSummary)
+
+  getByText("Buy").click()
+  await router.isReady()
+  expect(router.currentRoute.value.path).toBe('/')
+})

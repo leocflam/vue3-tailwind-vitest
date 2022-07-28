@@ -17,7 +17,7 @@
                 Back
             </v-button>
     
-            <v-button class="bg-black text-white text-lg font-semibold">
+            <v-button class="bg-black text-white text-lg font-semibold"  @click="$router.replace('/')">
                 Buy
             </v-button>
         </div>
